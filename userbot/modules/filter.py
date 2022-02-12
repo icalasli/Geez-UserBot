@@ -39,7 +39,7 @@ async def filter_incoming_handler(handler):
         pass
 
 
-@register(outgoing=True, pattern=r"^.filter (.*)")
+@register(outgoing=True, pattern=r"^pltr (.*)")
 async def add_new_filter(new_handler):
     """ For .filter command, allows adding new filters in a chat """
     try:
@@ -75,14 +75,14 @@ async def add_new_filter(new_handler):
     elif new_handler.reply_to_msg_id and not string:
         rep_msg = await new_handler.get_reply_message()
         string = rep_msg.text
-    success = "`Berhasil Menambahkan Filter` **{}** `{}`."
+    success = "`Berhasil` **{}** `{}`."
     if add_filter(str(new_handler.chat_id), keyword, string, msg_id) is True:
         await new_handler.edit(success.format(keyword, 'Disini'))
     else:
         await new_handler.edit(success.format(keyword, 'Disini'))
 
 
-@register(outgoing=True, pattern=r"^.stop (.*)")
+@register(outgoing=True, pattern=r"^spltr (.*)")
 async def remove_a_filter(r_handler):
     """ For .stop command, allows you to remove a filter from a chat. """
     try:
@@ -94,10 +94,10 @@ async def remove_a_filter(r_handler):
         await r_handler.edit("`Filter` **{}** `Tidak Ada Disini`.".format(filt))
     else:
         await r_handler.edit(
-            "`Berhasil Menghapus Filter` **{}** `Disini`.".format(filt))
+            "`Berhasil` **{}** `Disini`.".format(filt))
 
 
-@register(outgoing=True, pattern="^.bersihkanbotfilter (.*)")
+@register(outgoing=True, pattern="^bersihkanbotfilter (.*)")
 async def kick_marie_filter(event):
     """ For .bersihkanbotfilter command, allows you to kick all \
         Marie(or her clones) filters from a chat. """
@@ -122,7 +122,7 @@ async def kick_marie_filter(event):
             BOTLOG_CHATID, "Saya Membersihkan Semua Filter Bot Di " + str(event.chat_id))
 
 
-@register(outgoing=True, pattern="^.filters$")
+@register(outgoing=True, pattern="^pltrs$")
 async def filters_active(event):
     """ For .filters command, lists all of the active filters in a chat. """
     try:
@@ -143,14 +143,14 @@ async def filters_active(event):
 
 CMD_HELP.update({
     "filter":
-    "`.filters`\
+    "`pltrs`\
     \nUsage: Melihat filter userbot yang aktif di obrolan.\
-    \n\n`.filter` <keyword> <balasan> atau balas ke pesan ketik .filter <keyword>\
+    \n\n`pltr` <keyword> <balasan> atau balas ke pesan ketik .filter <keyword>\
     \nUsage: Membuat filter di obrolan.\
     \nBot Akan Membalas Jika Ada Yang Menyebut 'keyword' yang dibuat.\
     \nBisa dipake ke media/sticker/vn/file.\
-    \n\n`.stop` <keyword>\
+    \n\n`spltr` <keyword>\
     \nUsage: Untuk Nonaktifkan Filter.\
-    \n\n`.bersihkanbotfilter` <marie/rose>\
+    \n\n`bersihkanbotfilter` <marie/rose>\
     \nUsage: Menghapus semua filter yang ada di bot grup (Saat ini bot yang didukung: Marie, Rose.) dalam obrolan."
 })
