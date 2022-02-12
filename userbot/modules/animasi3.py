@@ -1237,7 +1237,7 @@ async def iqless(e):
     await e.edit("♿")
 
 
-@register(outgoing=True, pattern="^.fuck$")
+@register(outgoing=True, pattern="^fuck$")
 async def iqless(e):
     await e.edit("🖕🖕🖕🖕🖕🖕🖕🖕\n🖕🖕🖕🖕🖕🖕🖕🖕\n🖕🖕\n🖕🖕\n🖕🖕\n🖕🖕🖕🖕🖕🖕\n🖕🖕🖕🖕🖕🖕\n🖕🖕\n🖕🖕\n🖕🖕\n🖕🖕\n🖕🖕")
 
@@ -1254,7 +1254,7 @@ async def moon(event):
         return
 
 
-@register(outgoing=True, pattern=r"^\.bunga$")
+@register(outgoing=True, pattern=r"^\bunga$")
 async def moon(event):
     deq = deque(list("🌼🌻🌺🌹🌸🌷"))
     try:
@@ -1266,7 +1266,7 @@ async def moon(event):
         return
 
 
-@register(outgoing=True, pattern=r"^\.waktu$")
+@register(outgoing=True, pattern=r"^\waktu$")
 async def moon(event):
     deq = deque(list("🎑🌄🌅🌇🌆🌃🌌"))
     try:
@@ -1278,7 +1278,7 @@ async def moon(event):
         return
 
 
-@register(outgoing=True, pattern=r"^\.buah$")
+@register(outgoing=True, pattern=r"^\buah$")
 async def moon(event):
     deq = deque(list("🍉🍓🍇🍎🍍🍐🍌"))
     try:
@@ -1290,7 +1290,7 @@ async def moon(event):
         return
 
 
-@register(outgoing=True, pattern=r"^\.clock$")
+@register(outgoing=True, pattern=r"^\clock$")
 async def clock(event):
     deq = deque(list("🕙🕘🕗🕖🕕🕔🕓🕒🕑🕐🕛"))
     try:
@@ -1302,7 +1302,7 @@ async def clock(event):
         return
 
 
-@register(outgoing=True, pattern="^.rain$")
+@register(outgoing=True, pattern="^rain$")
 async def rain(event):
     deq = deque(list("☀️🌤⛅️🌥☁️🌧⛈"))
     try:
@@ -1314,7 +1314,7 @@ async def rain(event):
         return
 
 
-@register(outgoing=True, pattern="^.love$")
+@register(outgoing=True, pattern="^love$")
 async def love(event):
     deq = deque(list("❤️🧡💛💚💙💜🖤💕💞💓💗💖💘💝"))
     try:
@@ -1326,7 +1326,7 @@ async def love(event):
         return
 
 
-@register(outgoing=True, pattern="^.earth$")
+@register(outgoing=True, pattern="^earth$")
 async def earth(event):
     deq = deque(list("🌏🌍🌎🌎🌍🌏🌍🌎"))
     try:
@@ -1338,7 +1338,7 @@ async def earth(event):
         return
 
 
-@register(outgoing=True, pattern="^.hati$")
+@register(outgoing=True, pattern="^hati$")
 async def earth(event):
     deq = deque(list("🖤💜💙💚💛🧡❤️🤍"))
     try:
@@ -1350,7 +1350,7 @@ async def earth(event):
         return
 
 
-@register(outgoing=True, pattern="^.monyet$")
+@register(outgoing=True, pattern="^monyet$")
 async def earth(event):
     deq = deque(list("🙈🙉🙈🙉🙈🙉🙈🙉"))
     try:
@@ -1362,7 +1362,7 @@ async def earth(event):
         return
 
 
-@register(outgoing=True, pattern="^.emo$")
+@register(outgoing=True, pattern="^emo$")
 async def earth(event):
     deq = deque(list("🙂😁😄😃😂🤣😭🐵🙊🙉🙈"))
     try:
@@ -1613,7 +1613,7 @@ async def gtfo(e):
                      "`\n███████████████████████████████ `")
 
 
-@register(outgoing=True, pattern=r"^\.nih$")
+@register(outgoing=True, pattern=r"^\nih$")
 async def nih(e):
     if not e.text[0].isalpha() and e.text[0] not in ("/", "#", "@", "!"):
         await e.edit("`\n(\\_/)`"
@@ -1637,7 +1637,7 @@ async def gtfo(e):
                      "`\n ██   ██`")
 
 
-@register(outgoing=True, pattern=r"^\.tai$")
+@register(outgoing=True, pattern=r"^\tai$")
 async def taco(e):
     if not e.text[0].isalpha() and e.text[0] not in ("/", "#", "@", "!"):
         await e.edit("\n{\\__/}"
@@ -1719,7 +1719,7 @@ async def faces(siwis):
     await siwis.edit(reply_text)
 
 
-@register(outgoing=True, pattern="^.koc$")
+@register(outgoing=True, pattern="^koc$")
 async def koc(e):
     if not e.text[0].isalpha() and e.text[0] not in ("/", "#", "@", "!"):
         await e.edit("8✊===D")
@@ -1754,7 +1754,7 @@ async def koc(e):
         await e.edit("😭😭😭😭")
 
 
-@register(outgoing=True, pattern="^.gas$")
+@register(outgoing=True, pattern="^gas$")
 async def gas(e):
     if not e.text[0].isalpha() and e.text[0] not in ("/", "#", "@", "!"):
         await e.edit("___________________🚑")
@@ -1829,9 +1829,9 @@ CMD_HELP.update({
     "\nPenggunaan: Oeeeem"
     "\n\n>`.fp`"
     "\nUsage: Telapak Tangan:P"
-    "\n\n>`.moon`"
+    "\n\n>`moon`"
     "\nUsage: animasi bulan."
-    "\n\n>`.clock`"
+    "\n\n>`clock`"
     "\nUsage: animasi jam."
     "\n\n>`.hi`"
     "\nUsage: Sapa semuanya!"
