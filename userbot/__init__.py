@@ -531,7 +531,7 @@ with bot:
                         [
                             custom.Button.url(
                                 "⚡𝗚𝗲𝗲𝘇-𝙐𝙎𝙀𝙍𝘽𝙊𝙏⚡",
-                                "https://github.com/vckyou/Geez-Userbot"),
+                                "https://github.com/icalasli/icalaslibot"),
                             custom.Button.url(
                                 "OWNER",
                                 "t.me/Vckyouubitch")]],
